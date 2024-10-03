@@ -1,0 +1,166 @@
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    /* Weights: 400, 500, 600, 700 */
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--red);
+    background-image: url(/images/bg-intro-mobile.png);
+}
+
+.all-sections{
+    padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 378px) {
+    .all-sections{
+        max-width: 1000px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 0 5rem;
+        margin: auto;
+        gap: 5rem;
+    }
+}
+
+.content-section{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+h1{
+    margin: 0;
+}
+
+@media screen and (min-width: 378px){
+    .content-section{
+        text-align: left;
+    }
+    h1{
+        font-size: 3rem;
+    }
+}
+
+/* For free section */
+
+.for-free-section{
+    padding: 1rem 4rem;
+    background-color: var(--blue);
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow:  0 10px hsla(249, 10%, 26%, 0.5);
+}
+
+/* Input section */
+
+.input-section{
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow:  0 10px hsla(249, 10%, 26%, 0.5);
+}
+
+.input-filled{
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.input-box{
+    border: 1px solid var(--grayish-blue);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto min-content;
+    align-items: center;
+    height: 3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-box-failed{
+    margin: 0;
+    border: 2px solid var(--red);
+}
+
+.input{
+    height: 90%;
+    border: none;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input::placeholder{
+    font-weight: 600;
+}
+
+/* Style autofilled inputs */
+input:-webkit-autofill {
+    /* Apply styles to override default autofill styles */
+    background-color: #fff; /* Set background color */
+    box-shadow: 0 0 0 30px white inset; /* Add a box shadow to override autofill background color */
+    -webkit-text-fill-color: #333; /* Set text color */
+}
+
+.input-empty-text{
+    margin: 0;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--red);
+    text-align: right;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.icon-error{
+    margin-right: 1rem;
+    display: none;
+}
+
+.btn{
+    width: 100%;
+    display: block;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    box-shadow: 0 5px hsla(154, 58%, 35%, 0.8);
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.terms{
+    color: var(--grayish-blue);
+    font-size: 10px;
+    padding: 1rem;
+    margin: 0;
+}
+
+.terms span{
+    color: var(--red);
+    font-weight: 700;
+}
+
+
